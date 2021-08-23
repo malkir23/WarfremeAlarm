@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello, World!</title>
+        
+        <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
+        <script type="text/javascript" src="/eel.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <link rel="icon" type="image/png" href="/1.png">
+    </head>
+    
+    <body>
+      <div id="hellow"></div>
+    </body>
+    <script type="text/javascript">
+          async function run() {
+          let message = await eel.bingR()();
+          $('#hellow').append(message);
+      }
+      run();
+      window.setTimeout(slowAlert, 5000);
+      function slowAlert() {
+        window.close();
+      }
+      </script>
+</html>
