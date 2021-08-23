@@ -5,6 +5,11 @@ url_for_event = 'http://content.warframe.com/dynamic/rss.php'
 
 
 def get_events():
+    """[summary]
+
+    Returns:
+        [type]: [description]
+    """
     value = ''
     remote_data = urllib.request.urlopen(url_for_event).read()
     parse_only = SoupStrainer('item')
